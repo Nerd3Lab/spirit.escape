@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 220 13% 8%;
+    --foreground: 220 13% 95%;
+
+    --card: 220 13% 10%;
+    --card-foreground: 220 13% 95%;
+
+    --popover: 220 13% 10%;
+    --popover-foreground: 220 13% 95%;
+
+    --primary: 265 85% 58%;
+    --primary-foreground: 220 13% 8%;
+
+    --secondary: 220 13% 16%;
+    --secondary-foreground: 220 13% 85%;
+
+    --muted: 220 13% 16%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 191 100% 48%;
+    --accent-foreground: 220 13% 8%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 13% 95%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 265 85% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 13% 6%;
+    --sidebar-foreground: 220 13% 85%;
+    --sidebar-primary: 265 85% 58%;
+    --sidebar-primary-foreground: 220 13% 8%;
+    --sidebar-accent: 220 13% 12%;
+    --sidebar-accent-foreground: 220 13% 85%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 265 85% 58%;
+
+    /* Gaming/Neon Colors */
+    --neon-blue: 191 100% 48%;
+    --neon-purple: 265 85% 58%;
+    --neon-green: 142 76% 36%;
+    --neon-orange: 25 95% 53%;
+    --neon-pink: 330 81% 60%;
+
+    /* Game-specific Colors */
+    --game-bg: 220 13% 6%;
+    --game-surface: 220 13% 10%;
+    --game-tile: 220 13% 14%;
+    --game-tile-hover: 220 13% 18%;
+    --game-relic: 265 85% 58%;
+    --game-trap: 0 75% 60%;
+    --game-grid: 220 13% 20%;
+  }
+
+  .dark {
+    --background: 220 13% 4%;
+    --foreground: 220 13% 98%;
+
+    --card: 220 13% 8%;
+    --card-foreground: 220 13% 98%;
+
+    --popover: 220 13% 8%;
+    --popover-foreground: 220 13% 98%;
+
+    --primary: 265 85% 58%;
+    --primary-foreground: 220 13% 4%;
+
+    --secondary: 220 13% 12%;
+    --secondary-foreground: 220 13% 88%;
+
+    --muted: 220 13% 12%;
+    --muted-foreground: 220 13% 60%;
+
+    --accent: 191 100% 48%;
+    --accent-foreground: 220 13% 4%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 13% 98%;
+
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 265 85% 58%;
+
+    --sidebar-background: 220 13% 3%;
+    --sidebar-foreground: 220 13% 90%;
+    --sidebar-primary: 265 85% 58%;
+    --sidebar-primary-foreground: 220 13% 4%;
+    --sidebar-accent: 220 13% 8%;
+    --sidebar-accent-foreground: 220 13% 90%;
+    --sidebar-border: 220 13% 12%;
+    --sidebar-ring: 265 85% 58%;
+
+    /* Enhanced Gaming Colors for Dark Mode */
+    --game-bg: 220 13% 3%;
+    --game-surface: 220 13% 6%;
+    --game-tile: 220 13% 10%;
+    --game-tile-hover: 220 13% 15%;
+    --game-relic: 265 85% 65%;
+    --game-trap: 0 85% 65%;
+    --game-grid: 220 13% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    filter: drop-shadow(0 0 2px currentColor) drop-shadow(0 0 5px currentColor)
+      drop-shadow(0 0 10px currentColor);
+  }
+
+  .neon-border {
+    border: 1px solid currentColor;
+    box-shadow:
+      0 0 5px currentColor,
+      inset 0 0 5px currentColor;
+  }
+
+  .game-grid-bg {
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(139, 92, 246, 0.1) 50%,
+        transparent 100%
+      ),
+      linear-gradient(
+        0deg,
+        transparent 0%,
+        rgba(139, 92, 246, 0.1) 50%,
+        transparent 100%
+      );
+    background-size: 50px 50px;
+  }
+
+  .relic-shimmer {
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(139, 92, 246, 0.3) 50%,
+      transparent 70%
+    );
+    background-size: 200% 200%;
+    animation: shimmer 2s infinite;
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cyber-grid {
+    background-image:
+      linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.fade-appear-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
