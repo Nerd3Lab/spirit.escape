@@ -4,15 +4,17 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json pnpm-lock.yaml ./
 
-RUN npm install
+RUN npm install -g pnpm
+
+RUN pnpm install
 
 RUN npm i -g serve
 
 COPY . .
 
-RUN npm run build
+RUN pnpm run build:client
 
 EXPOSE 3000
 

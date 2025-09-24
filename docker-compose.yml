@@ -7,9 +7,7 @@ services:
       dockerfile: Dockerfile
     env_file:
       - .env
-#     networks:
-#       - dokploy-network
+    # networks:
+    #   - dokploy-network
 
-# networks:
-#   dokploy-network:
-#     external: true
+
