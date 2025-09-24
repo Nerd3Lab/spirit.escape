@@ -12,6 +12,10 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist/spa",
   },
+  preview: {
+    allowedHosts: ['*'],  // allow all hosts
+    port: 3000,
+  },
   plugins: [react()
     // , expressPlugin()
   ],
