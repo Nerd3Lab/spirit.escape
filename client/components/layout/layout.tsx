@@ -50,7 +50,10 @@ function Layout({ children }: { children: React.ReactNode }) {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Link to="/play" className="contents">
-                  <SidebarMenuButton isActive={isActive("/play")} tooltip="Play">
+                  <SidebarMenuButton
+                    isActive={isActive("/play")}
+                    tooltip="Play"
+                  >
                     <Gamepad2 />
                     <span>Play</span>
                   </SidebarMenuButton>

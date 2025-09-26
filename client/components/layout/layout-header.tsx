@@ -25,7 +25,9 @@ function LayoutHeader() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-neon-purple">Zonic.Fun</h1>
-              <p className="text-xs text-muted-foreground">Decentralized Risk Game</p>
+              <p className="text-xs text-muted-foreground">
+                Decentralized Risk Game
+              </p>
             </div>
           </div>
 
