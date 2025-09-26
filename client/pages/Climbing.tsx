@@ -40,11 +40,14 @@ export default function Climbing() {
   const [gameOver, setGameOver] = useState(false);
   const [currentRow, setCurrentRow] = useState(0); // next row to play
   const [selectedCols, setSelectedCols] = useState<number[]>([]);
-  const [board, setBoard] = useState<RowConfig[]>(() => createBoard(ROWS, COLS));
+  const [board, setBoard] = useState<RowConfig[]>(() =>
+    createBoard(ROWS, COLS),
+  );
 
   const multipliers = useMemo(() => generateMultipliers(ROWS), []);
 
-  const currentPayoutMultiplier = currentRow === 0 ? 1 : multipliers[currentRow - 1];
+  const currentPayoutMultiplier =
+    currentRow === 0 ? 1 : multipliers[currentRow - 1];
   const potentialWin = bet * currentPayoutMultiplier;
 
   const resetGame = () => {
@@ -102,7 +105,9 @@ export default function Climbing() {
     // Reshuffle bombs for remaining rows only
     setBoard((prev) =>
       prev.map((cfg, idx) =>
-        idx < currentRow ? cfg : { bombIndex: Math.floor(Math.random() * COLS) },
+        idx < currentRow
+          ? cfg
+          : { bombIndex: Math.floor(Math.random() * COLS) },
       ),
     );
   };
@@ -116,12 +121,18 @@ export default function Climbing() {
           <div className="glass-morphism rounded-xl p-6 border border-neon-purple/30">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
               <div>
-                <h2 className="text-2xl font-bold text-neon-purple">Climbing</h2>
-                <p className="text-muted-foreground">Pick a safe tile each row. Cash out anytime.</p>
+                <h2 className="text-2xl font-bold text-neon-purple">
+                  Climbing
+                </h2>
+                <p className="text-muted-foreground">
+                  Pick a safe tile each row. Cash out anytime.
+                </p>
               </div>
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">Balance</p>
-                <p className="text-xl font-bold text-neon-green">{balance.toFixed(4)} ETH</p>
+                <p className="text-xl font-bold text-neon-green">
+                  {balance.toFixed(4)} ETH
+                </p>
               </div>
             </div>
 
@@ -153,7 +164,10 @@ export default function Climbing() {
                             const isPicked = picked === c;
                             const isBomb = bombAt === c;
                             const canClick = active && !isPicked;
-                            const revealed = cleared || isPicked || (gameOver && rowIndex === currentRow && isBomb);
+                            const revealed =
+                              cleared ||
+                              isPicked ||
+                              (gameOver && rowIndex === currentRow && isBomb);
                             return (
                               <button
                                 key={c}
@@ -164,8 +178,12 @@ export default function Climbing() {
                                   canClick
                                     ? "bg-game-tile hover:bg-game-tile-hover border-neon-blue/40"
                                     : "bg-game-tile border-game-grid",
-                                  revealed && isBomb && "bg-red-500/20 border-red-500",
-                                  revealed && !isBomb && "bg-neon-purple/15 border-neon-purple",
+                                  revealed &&
+                                    isBomb &&
+                                    "bg-red-500/20 border-red-500",
+                                  revealed &&
+                                    !isBomb &&
+                                    "bg-neon-purple/15 border-neon-purple",
                                   isPicked && "ring-2 ring-neon-green",
                                 )}
                               >
@@ -250,12 +268,17 @@ export default function Climbing() {
                     onClick={cashOut}
                     className="bg-neon-orange text-black hover:bg-neon-orange/90 neon-glow animate-pulse-glow"
                   >
-                    <DollarSign className="w-4 h-4" /> Cash Out ({potentialWin.toFixed(4)})
+                    <DollarSign className="w-4 h-4" /> Cash Out (
+                    {potentialWin.toFixed(4)})
                   </Button>
                 )}
 
                 {(gameOver || (!inGame && currentRow > 0)) && (
-                  <Button variant="outline" onClick={resetGame} className="border-game-grid">
+                  <Button
+                    variant="outline"
+                    onClick={resetGame}
+                    className="border-game-grid"
+                  >
                     <Undo2 className="w-4 h-4" /> Reset
                   </Button>
                 )}
