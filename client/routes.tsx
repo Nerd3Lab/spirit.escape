@@ -1,6 +1,7 @@
 import { createRef } from "react";
 import Index from "./pages/Index";
 import Play from "@/pages/Play";
+import Death from "@/pages/Death";
 import Staking from "@/pages/Staking";
 import Leaderboard from "@/pages/Leaderboard";
 import Referral from "@/pages/Referral";
