@@ -7,10 +7,9 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-game-bg">
       {/* Main Dashboard */}
-      <Dashboard />
 
       {/* Staking Promotion */}
-      <div className="container mx-auto px-6 pb-8">
+      <div className="container mt-4 mx-auto px-6 pb-8">
         <div className="glass-morphism rounded-xl p-6 border border-neon-purple/30">
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">

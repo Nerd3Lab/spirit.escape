@@ -22,6 +22,12 @@ import {
   Trophy,
   Users,
   ShieldCheck,
+  Bomb,
+  Home,
+  Building,
+  Cuboid,
+  Pickaxe,
+  Tractor,
 } from "lucide-react";
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -37,34 +43,53 @@ function Layout({ children }: { children: React.ReactNode }) {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Navigation</SidebarGroupLabel>
             <SidebarMenu>
               <SidebarMenuItem>
                 <Link to="/" className="contents">
                   <SidebarMenuButton isActive={isActive("/")} tooltip="Home">
-                    <LayoutDashboard />
+                    <Home />
                     <span>Home</span>
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
+            </SidebarMenu>
+
+            <SidebarGroupLabel>Play</SidebarGroupLabel>
+            <SidebarMenu>
               <SidebarMenuItem>
-                <Link to="/play" className="contents">
+                <Link to="/mining" className="contents">
                   <SidebarMenuButton
-                    isActive={isActive("/play")}
-                    tooltip="Play"
+                    isActive={isActive("/mining")}
+                    tooltip="Mining"
                   >
-                    <Gamepad2 />
-                    <span>Play</span>
+                    <Pickaxe />
+                    <span>Mining</span>
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <Link to="/climbing" className="contents">
+                  <SidebarMenuButton
+                    isActive={isActive("/climbing")}
+                    tooltip="Climbing"
+                  >
+                    <Cuboid />
+                    <span>Climbing</span>
+                  </SidebarMenuButton>
+                </Link>
+              </SidebarMenuItem>
+            </SidebarMenu>
+
+            <SidebarGroupLabel>Utility</SidebarGroupLabel>
+            <SidebarMenu>
               <SidebarMenuItem>
                 <Link to="/staking" className="contents">
                   <SidebarMenuButton
                     isActive={isActive("/staking")}
                     tooltip="Staking"
                   >
-                    <ShieldCheck />
+                    <Tractor />
                     <span>Staking</span>
                   </SidebarMenuButton>
                 </Link>

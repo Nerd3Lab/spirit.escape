@@ -1,12 +1,13 @@
 import { createRef } from "react";
 import Index from "./pages/Index";
-import Play from "@/pages/Play";
+import Mining from "@/pages/Mining";
 import Death from "@/pages/Death";
 import Staking from "@/pages/Staking";
 import Leaderboard from "@/pages/Leaderboard";
 import Referral from "@/pages/Referral";
 import FairnessCheck from "@/pages/FairnessCheck";
 import NotFound from "@/pages/NotFound";
+import Climbing from "@/pages/Climbing";
 
 export const routes = [
   {
@@ -16,16 +17,16 @@ export const routes = [
     name: "Home",
   },
   {
-    path: "/play",
-    element: <Play />,
+    path: "/mining",
+    element: <Mining />,
     nodeRef: createRef(),
-    name: "Play",
+    name: "Mining",
   },
   {
-    path: "/death",
-    element: <Death />,
+    path: "/climbing",
+    element: <Climbing />,
     nodeRef: createRef(),
-    name: "Death",
+    name: "Climbing",
   },
   {
     path: "/staking",
