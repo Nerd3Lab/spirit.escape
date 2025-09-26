@@ -141,7 +141,7 @@ export default function Climbing() {
                       key={rowIndex}
                       className={cn(
                         "rounded-lg p-2 border transition-colors",
-                        active ? "border-neon-green neon-glow" : "border-game-grid",
+                        active ? "border-neon-green/60" : "border-game-grid",
                       )}
                     >
                       <div className="flex items-center gap-3">
