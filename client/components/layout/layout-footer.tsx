@@ -10,7 +10,7 @@ function LayoutFooter() {
             <div className="flex items-center gap-2 mb-4">
               <Sparkles className="w-5 h-5 text-neon-purple" />
               <span className="font-semibold text-neon-purple">
-                Spirit Escape
+                Zonic.Fun
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -66,7 +66,7 @@ function LayoutFooter() {
         </div>
 
         <div className="border-t border-game-grid mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 Spirit Escape. Built with ❤️ for the crypto community.</p>
+          <p>© 2024 Zonic.Fun. Built with ❤️ for the crypto community.</p>
         </div>
       </div>
     </footer>

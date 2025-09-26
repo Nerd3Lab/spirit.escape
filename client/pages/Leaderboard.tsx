@@ -161,7 +161,7 @@ export default function Leaderboard() {
             <Trophy className="w-8 h-8 text-neon-orange" />
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Top Spirit Escape explorers ranked by total winnings. Compete with
+            Top Zonic.Fun explorers ranked by total winnings. Compete with
             the best relic hunters across all realms.
           </p>
         </div>

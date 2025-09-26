@@ -132,7 +132,7 @@ export default function FairnessCheck() {
             <Shield className="w-8 h-8 text-neon-green" />
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Every game in Spirit Escape is provably fair using Chainlink VRF and
+            Every game in Zonic.Fun is provably fair using Chainlink VRF and
             cryptographic proofs. Verify any game result independently and
             transparently.
           </p>

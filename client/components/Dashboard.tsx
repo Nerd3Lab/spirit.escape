@@ -71,7 +71,7 @@ export function Dashboard() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-2xl font-bold text-neon-purple mb-2">
-                  Spirit Escape
+                  Zonic.Fun
                 </h2>
                 <p className="text-muted-foreground">
                   Explore ancient ruins and collect spirit relics
