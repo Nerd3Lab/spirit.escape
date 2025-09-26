@@ -71,7 +71,7 @@ export function Dashboard() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-2xl font-bold text-neon-purple mb-2">
-                  Spirit Escape
+                  Zonic.Fun
                 </h2>
                 <p className="text-muted-foreground">
                   Explore ancient ruins and collect spirit relics
@@ -80,7 +80,7 @@ export function Dashboard() {
               <div className="text-right">
                 <p className="text-sm text-muted-foreground">Balance</p>
                 <p className="text-xl font-bold text-neon-green">
-                  {balance.toFixed(4)} ETH
+                  {balance.toFixed(4)} Sol
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export function Dashboard() {
                   disabled={gameActive}
                   className="w-20 px-2 py-1 bg-game-tile border border-game-grid rounded text-sm"
                 />
-                <span className="text-sm text-muted-foreground">ETH</span>
+                <span className="text-sm text-muted-foreground">Sol</span>
               </div>
 
               <div className="flex items-center gap-2">
@@ -118,7 +118,7 @@ export function Dashboard() {
                     className="bg-neon-green hover:bg-neon-green/90 text-black neon-glow"
                   >
                     <Play className="w-4 h-4 mr-2" />
-                    Play ({currentBet} ETH)
+                    Play ({currentBet} Sol)
                   </Button>
                 ) : (
                   <Button
@@ -126,7 +126,7 @@ export function Dashboard() {
                     className="bg-neon-orange hover:bg-neon-orange/90 text-black neon-glow animate-pulse-glow"
                   >
                     <DollarSign className="w-4 h-4 mr-2" />
-                    Cash Out ({(currentBet * currentMultiplier).toFixed(4)} ETH)
+                    Cash Out ({(currentBet * currentMultiplier).toFixed(4)} Sol)
                   </Button>
                 )}
               </div>
@@ -139,7 +139,7 @@ export function Dashboard() {
               <div className="mt-4 p-4 bg-game-surface rounded-lg border border-game-grid text-center">
                 <p className="text-lg font-medium">
                   {currentMultiplier > 1
-                    ? `🎉 You won ${(currentBet * currentMultiplier).toFixed(4)} ETH!`
+                    ? `🎉 You won ${(currentBet * currentMultiplier).toFixed(4)} Sol!`
                     : "💀 Game Over - You hit a trap!"}
                 </p>
               </div>
@@ -178,7 +178,7 @@ export function Dashboard() {
               </h4>
               <p>
                 All games use verifiable randomness (VRF) and are fully
-                on-chain. House edge of 3-5% is shared with ETH stakers.
+                on-chain. House edge of 3-5% is shared with Sol stakers.
               </p>
             </div>
           </div>

@@ -99,7 +99,7 @@ export default function Referral() {
   };
 
   const shareToTwitter = () => {
-    const text = `🎮 Join me in Spirit Escape - the ultimate crypto risk game! 💎 Explore ancient ruins, collect relics, and earn ETH! Use my referral link: ${referralLink}`;
+    const text = `🎮 Join me in Zonic.Fun - the ultimate crypto risk game! 💎 Explore ancient ruins, collect relics, and earn SOL! Use my referral link: ${referralLink}`;
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
       "_blank",
@@ -107,7 +107,7 @@ export default function Referral() {
   };
 
   const shareToTelegram = () => {
-    const text = `🎮 Join me in Spirit Escape - the ultimate crypto risk game! 💎 Use my referral link: ${referralLink}`;
+    const text = `🎮 Join me in Zonic.Fun - the ultimate crypto risk game! 💎 Use my referral link: ${referralLink}`;
     window.open(
       `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${encodeURIComponent(text)}`,
       "_blank",
@@ -135,7 +135,7 @@ export default function Referral() {
             <Gift className="w-8 h-8 text-neon-orange" />
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Invite friends to Spirit Escape and earn commissions from their
+            Invite friends to Zonic.Fun and earn commissions from their
             gameplay. The more you refer, the higher your tier and rewards!
           </p>
         </div>
@@ -172,7 +172,7 @@ export default function Referral() {
               <div>
                 <p className="text-sm text-muted-foreground">Total Earnings</p>
                 <p className="text-2xl font-bold text-neon-purple">
-                  {mockStats.totalEarnings.toFixed(3)} ETH
+                  {mockStats.totalEarnings.toFixed(3)} SOL
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Referral() {
               <div>
                 <p className="text-sm text-muted-foreground">This Month</p>
                 <p className="text-2xl font-bold text-neon-orange">
-                  {mockStats.thisMonthEarnings.toFixed(3)} ETH
+                  {mockStats.thisMonthEarnings.toFixed(3)} SOL
                 </p>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function Referral() {
                     <p>• Minimum referrals: {tier.minReferrals}</p>
                     <p>• Commission rate: {tier.commission}%</p>
                     {tier.bonusReward > 0 && (
-                      <p>• Tier bonus: {tier.bonusReward} ETH</p>
+                      <p>• Tier bonus: {tier.bonusReward} SOL</p>
                     )}
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function Referral() {
                 2. Friends Join & Play
               </h4>
               <p className="text-sm text-muted-foreground">
-                When someone uses your link to join Spirit Escape and starts
+                When someone uses your link to join Zonic.Fun and starts
                 playing, they become your referral.
               </p>
             </div>
@@ -423,7 +423,7 @@ export default function Referral() {
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground">
             Referral rewards are paid automatically every 24 hours. Minimum
-            payout: 0.001 ETH. All referrals must be legitimate players - abuse
+            payout: 0.001 SOL. All referrals must be legitimate players - abuse
             will result in account suspension.
           </p>
         </div>
