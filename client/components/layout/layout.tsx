@@ -16,24 +16,61 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Link, useLocation } from "react-router-dom";
-import {
-  LayoutDashboard,
-  Gamepad2,
-  Trophy,
-  Users,
-  ShieldCheck,
-  Bomb,
-  Home,
-  Building,
-  Cuboid,
-  Pickaxe,
-  Tractor,
-} from "lucide-react";
+import { Home, Cuboid, Pickaxe, Tractor, Trophy, Users } from "lucide-react";
 
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+
+  const sidebarItems = [
+    {
+      label: "Home",
+      path: "/",
+      icon: <Home />,
+      tooltip: "Home",
+    },
+    {
+      label: "Play",
+      items: [
+        {
+          label: "Mining",
+          path: "/mining",
+          icon: <Pickaxe />,
+          tooltip: "Mining",
+        },
+        {
+          label: "Climbing",
+          path: "/climbing",
+          icon: <Cuboid />,
+          tooltip: "Climbing",
+        },
+      ],
+    },
+    {
+      label: "Utility",
+      items: [
+        {
+          label: "Staking",
+          path: "/staking",
+          icon: <Tractor />,
+          tooltip: "Staking",
+        },
+        {
+          label: "Leaderboard",
+          path: "/leaderboard",
+          icon: <Trophy />,
+          tooltip: "Leaderboard",
+        },
+        {
+          label: "Referrals",
+          path: "/referral",
+          icon: <Users />,
+          tooltip: "Referrals",
+        },
+      ],
+    },
+  ];
 
   return (
     <SidebarProvider>
@@ -42,82 +79,44 @@ function Layout({ children }: { children: React.ReactNode }) {
           <SidebarTrigger />
         </SidebarHeader>
         <SidebarContent>
-          <SidebarGroup>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <Link to="/" className="contents">
-                  <SidebarMenuButton isActive={isActive("/")} tooltip="Home">
-                    <Home />
-                    <span>Home</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-            </SidebarMenu>
-
-            <SidebarGroupLabel>Play</SidebarGroupLabel>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <Link to="/mining" className="contents">
-                  <SidebarMenuButton
-                    isActive={isActive("/mining")}
-                    tooltip="Mining"
-                  >
-                    <Pickaxe />
-                    <span>Mining</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <Link to="/climbing" className="contents">
-                  <SidebarMenuButton
-                    isActive={isActive("/climbing")}
-                    tooltip="Climbing"
-                  >
-                    <Cuboid />
-                    <span>Climbing</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-            </SidebarMenu>
-
-            <SidebarGroupLabel>Utility</SidebarGroupLabel>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <Link to="/staking" className="contents">
-                  <SidebarMenuButton
-                    isActive={isActive("/staking")}
-                    tooltip="Staking"
-                  >
-                    <Tractor />
-                    <span>Staking</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <Link to="/leaderboard" className="contents">
-                  <SidebarMenuButton
-                    isActive={isActive("/leaderboard")}
-                    tooltip="Leaderboard"
-                  >
-                    <Trophy />
-                    <span>Leaderboard</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <Link to="/referral" className="contents">
-                  <SidebarMenuButton
-                    isActive={isActive("/referral")}
-                    tooltip="Referrals"
-                  >
-                    <Users />
-                    <span>Referrals</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroup>
+          {sidebarItems.map((group, index) => (
+            <SidebarGroup key={index}>
+              {group.items ? (
+                <>
+                  <SidebarGroupLabel>{group.label}</SidebarGroupLabel>
+                  <SidebarMenu>
+                    {group.items.map((item, subIndex) => (
+                      <SidebarMenuItem key={subIndex}>
+                        <Link to={item.path} className="contents">
+                          <SidebarMenuButton
+                            isActive={isActive(item.path)}
+                            tooltip={item.tooltip}
+                          >
+                            {item.icon}
+                            <span>{item.label}</span>
+                          </SidebarMenuButton>
+                        </Link>
+                      </SidebarMenuItem>
+                    ))}
+                  </SidebarMenu>
+                </>
+              ) : (
+                <SidebarMenu>
+                  <SidebarMenuItem>
+                    <Link to={group.path} className="contents">
+                      <SidebarMenuButton
+                        isActive={isActive(group.path)}
+                        tooltip={group.tooltip}
+                      >
+                        {group.icon}
+                        <span>{group.label}</span>
+                      </SidebarMenuButton>
+                    </Link>
+                  </SidebarMenuItem>
+                </SidebarMenu>
+              )}
+            </SidebarGroup>
+          ))}
         </SidebarContent>
         <SidebarSeparator />
         {/* Rail to click-collapse on desktop */}
