@@ -30,7 +30,9 @@ export default function Death() {
           <div className="glass-morphism rounded-xl p-6 border border-neon-purple/30">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-2xl font-bold text-neon-purple mb-2">Game Over</h2>
+                <h2 className="text-2xl font-bold text-neon-purple mb-2">
+                  Game Over
+                </h2>
                 <p className="text-muted-foreground">You hit a trap</p>
               </div>
               <div className="text-right">
@@ -46,7 +48,9 @@ export default function Death() {
                 <div
                   key={i}
                   className={`flex items-center gap-4 px-3 py-4 rounded-xl ${
-                    i === 4 ? "border-4 border-neon-green/80" : "border border-game-grid"
+                    i === 4
+                      ? "border-4 border-neon-green/80"
+                      : "border border-game-grid"
                   } bg-game-surface`}
                 >
                   <div className="w-12 text-left text-sm text-muted-foreground">
@@ -57,11 +61,15 @@ export default function Death() {
                       <div
                         key={tIdx}
                         className={`h-12 rounded flex items-center justify-center ${
-                          tile.highlighted ? "bg-neon-green" : "bg-game-tile border border-game-grid"
+                          tile.highlighted
+                            ? "bg-neon-green"
+                            : "bg-game-tile border border-game-grid"
                         }`}
                       >
                         {tile.hasSkull ? (
-                          <span className={`${tile.highlighted ? "text-black" : "text-white"} text-xl`}>
+                          <span
+                            className={`${tile.highlighted ? "text-black" : "text-white"} text-xl`}
+                          >
                             ☠️
                           </span>
                         ) : null}
@@ -80,10 +88,13 @@ export default function Death() {
                 {""}
               </p>
               <div className="flex gap-3 justify-center mt-2">
-                <Button onClick={() => navigate('/play')} className="bg-neon-green hover:bg-neon-green/90 text-black neon-glow">
+                <Button
+                  onClick={() => navigate("/play")}
+                  className="bg-neon-green hover:bg-neon-green/90 text-black neon-glow"
+                >
                   Retry
                 </Button>
-                <Button variant="outline" onClick={() => navigate('/')}>
+                <Button variant="outline" onClick={() => navigate("/")}>
                   Home
                 </Button>
               </div>
@@ -100,7 +111,14 @@ export default function Death() {
               1.58 x
             </div>
             <div className="ml-3 w-8 h-8 rounded-full border border-game-grid flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <circle cx="12" cy="12" r="10" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -121,12 +139,22 @@ export default function Death() {
           <div className="flex items-center gap-3 mb-4">
             <div className="flex-1">
               <div className="rounded-lg border border-neon-green p-1 flex items-center gap-2">
-                <button className="px-4 py-2 rounded-full bg-neon-green text-black font-semibold">.001</button>
-                <button className="px-4 py-2 rounded-full text-muted-foreground">.01</button>
-                <button className="px-4 py-2 rounded-full text-muted-foreground">.1</button>
-                <button className="px-4 py-2 rounded-full text-muted-foreground">1</button>
+                <button className="px-4 py-2 rounded-full bg-neon-green text-black font-semibold">
+                  .001
+                </button>
+                <button className="px-4 py-2 rounded-full text-muted-foreground">
+                  .01
+                </button>
+                <button className="px-4 py-2 rounded-full text-muted-foreground">
+                  .1
+                </button>
+                <button className="px-4 py-2 rounded-full text-muted-foreground">
+                  1
+                </button>
               </div>
-              <div className="text-xs text-muted-foreground mt-2">0.0046 ETH / CUSTOM BET</div>
+              <div className="text-xs text-muted-foreground mt-2">
+                0.0046 ETH / CUSTOM BET
+              </div>
             </div>
 
             <div>
@@ -137,7 +165,9 @@ export default function Death() {
           </div>
 
           <div className="mb-2">
-            <Button className="w-full bg-neon-green text-black neon-glow py-4 text-lg font-bold">Retry</Button>
+            <Button className="w-full bg-neon-green text-black neon-glow py-4 text-lg font-bold">
+              Retry
+            </Button>
           </div>
 
           <div className="flex justify-end">
