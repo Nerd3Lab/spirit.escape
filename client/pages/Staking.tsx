@@ -40,7 +40,7 @@ export default function Staking() {
                 House Staking
               </h1>
               <p className="text-muted-foreground">
-                Stake ETH to become the house and earn revenue share
+                Stake SOL to become the house and earn revenue share
               </p>
             </div>
           </div>

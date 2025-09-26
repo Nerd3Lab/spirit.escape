@@ -20,7 +20,7 @@ export function GameStats({
           <div>
             <p className="text-sm text-muted-foreground">Total Pool Size</p>
             <p className="text-2xl font-bold text-neon-blue">
-              {poolSize.toLocaleString()} ETH
+              {poolSize.toLocaleString()} Sol
             </p>
           </div>
           <div className="p-3 bg-neon-blue/10 rounded-lg">
@@ -54,7 +54,7 @@ export function GameStats({
           <div>
             <p className="text-sm text-muted-foreground">Your Stake</p>
             <p className="text-2xl font-bold text-neon-purple">
-              {yourStake.toFixed(4)} ETH
+              {yourStake.toFixed(4)} Sol
             </p>
           </div>
           <div className="p-3 bg-neon-purple/10 rounded-lg">

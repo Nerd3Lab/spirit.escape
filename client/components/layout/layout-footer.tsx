@@ -14,7 +14,7 @@ function LayoutFooter() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              A fully decentralized crypto game built on Ethereum with
+              A fully decentralized crypto game built on Solona with
               verifiable fairness and community ownership.
             </p>
           </div>

@@ -265,7 +265,7 @@ export default function FairnessCheck() {
                 </div>
                 <Button className="w-full bg-neon-purple hover:bg-neon-purple/90 text-primary-foreground">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  View on Etherscan
+                  View on Solscan
                 </Button>
               </div>
             </div>
@@ -310,8 +310,8 @@ export default function FairnessCheck() {
                       }`}
                     >
                       {record.outcome === "win"
-                        ? `+${record.winAmount} ETH`
-                        : `-${record.betAmount} ETH`}
+                        ? `+${record.winAmount} SOL`
+                        : `-${record.betAmount} SOL`}
                     </span>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
@@ -408,7 +408,7 @@ export default function FairnessCheck() {
                       Bet Amount
                     </label>
                     <span className="text-neon-orange font-semibold">
-                      {selectedRecord.betAmount} ETH
+                      {selectedRecord.betAmount} SOL
                     </span>
                   </div>
                   <div>
@@ -423,7 +423,7 @@ export default function FairnessCheck() {
                       }
                     >
                       {selectedRecord.outcome === "win"
-                        ? `Won ${selectedRecord.winAmount} ETH`
+                        ? `Won ${selectedRecord.winAmount} SOL`
                         : "Lost"}
                     </span>
                   </div>
@@ -492,7 +492,7 @@ export default function FairnessCheck() {
                       size="sm"
                       onClick={() =>
                         window.open(
-                          `https://etherscan.io/tx/${selectedRecord.transactionHash}`,
+                          `https://solscan.io/tx/${selectedRecord.transactionHash}`,
                           "_blank",
                         )
                       }
@@ -580,8 +580,8 @@ export default function FairnessCheck() {
         {/* Technical Details */}
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground mb-4">
-            Smart contracts are deployed on Ethereum mainnet and verified on
-            Etherscan. VRF coordinator:
+            Smart contracts are deployed on Solona mainnet and verified on
+            Solscan. VRF coordinator:
             0x271682DEB8C4E0901D1a1550aD2e64D568E69909
           </p>
           <div className="flex justify-center gap-4">

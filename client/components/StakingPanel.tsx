@@ -177,7 +177,7 @@ export function StakingPanel({
       <div className="space-y-4">
         <div>
           <label className="text-sm text-muted-foreground mb-2 block">
-            Amount (ETH)
+            Amount (Sol)
           </label>
           <div className="relative">
             <Input
@@ -199,14 +199,14 @@ export function StakingPanel({
         <div className="text-xs text-muted-foreground">
           {activeTab === "stake" ? (
             <>
-              <p>Available: {maxStake.toFixed(4)} ETH</p>
+              <p>Available: {maxStake.toFixed(4)} Sol</p>
               <p className="text-neon-orange">⚠️ Minimum 1 week lock period</p>
               <p>House edge: 3-5% shared proportionally</p>
             </>
           ) : (
             <>
-              <p>Available to unstake: {availableAmount.toFixed(4)} ETH</p>
-              <p>Locked: {lockedAmount.toFixed(4)} ETH</p>
+              <p>Available to unstake: {availableAmount.toFixed(4)} Sol</p>
+              <p>Locked: {lockedAmount.toFixed(4)} Sol</p>
               <p className="text-neon-orange">
                 Locked funds cannot be withdrawn
               </p>
@@ -228,8 +228,8 @@ export function StakingPanel({
           }
         >
           {activeTab === "stake"
-            ? "Stake ETH (1 Week Lock)"
-            : "Unstake Available ETH"}
+            ? "Stake Sol (1 Week Lock)"
+            : "Unstake Available Sol"}
         </Button>
       </div>
 
@@ -247,7 +247,7 @@ export function StakingPanel({
               return (
                 <div key={index} className="space-y-2">
                   <div className="flex items-center justify-between text-xs">
-                    <span>{stake.amount.toFixed(4)} ETH</span>
+                    <span>{stake.amount.toFixed(4)} Sol</span>
                     <Badge
                       variant="outline"
                       className="border-neon-orange text-neon-orange"

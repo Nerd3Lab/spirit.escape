@@ -21,7 +21,7 @@ export default function Index() {
               <Sparkles className="w-6 h-6 text-neon-purple" />
             </div>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Stake your ETH to become part of the house and earn a share of the
+              Stake your SOL to become part of the house and earn a share of the
               revenue. All stakers receive proportional rewards from the 3-5%
               house edge on every game.
             </p>
@@ -45,7 +45,7 @@ export default function Index() {
               to="/staking"
               className="inline-flex items-center gap-2 bg-neon-purple hover:bg-neon-purple/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors neon-glow"
             >
-              Start Staking ETH
+              Start Staking SOL
               <Sparkles className="w-4 h-4" />
             </Link>
           </div>

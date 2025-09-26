@@ -230,7 +230,7 @@ export default function Leaderboard() {
               <TrendingUp className="w-6 h-6 text-neon-orange" />
               <div>
                 <p className="text-sm text-muted-foreground">Total Winnings</p>
-                <p className="text-xl font-bold text-neon-orange">1,247 ETH</p>
+                <p className="text-xl font-bold text-neon-orange">1,247 SOL</p>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function Leaderboard() {
               <Trophy className="w-6 h-6 text-neon-purple" />
               <div>
                 <p className="text-sm text-muted-foreground">Biggest Win</p>
-                <p className="text-xl font-bold text-neon-purple">24.7 ETH</p>
+                <p className="text-xl font-bold text-neon-purple">24.7 SOL</p>
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ export default function Leaderboard() {
                     </td>
                     <td className="p-4 text-right">
                       <span className="text-neon-green font-semibold">
-                        {entry.totalWinnings.toFixed(2)} ETH
+                        {entry.totalWinnings.toFixed(2)} SOL
                       </span>
                     </td>
                     <td className="p-4 text-right text-sm text-muted-foreground">
@@ -325,7 +325,7 @@ export default function Leaderboard() {
                     </td>
                     <td className="p-4 text-right">
                       <span className="text-neon-purple font-semibold">
-                        {entry.biggestWin.toFixed(1)} ETH
+                        {entry.biggestWin.toFixed(1)} SOL
                       </span>
                     </td>
                   </tr>

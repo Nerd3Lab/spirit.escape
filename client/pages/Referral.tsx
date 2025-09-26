@@ -99,7 +99,7 @@ export default function Referral() {
   };
 
   const shareToTwitter = () => {
-    const text = `🎮 Join me in Spirit Escape - the ultimate crypto risk game! 💎 Explore ancient ruins, collect relics, and earn ETH! Use my referral link: ${referralLink}`;
+    const text = `🎮 Join me in Spirit Escape - the ultimate crypto risk game! 💎 Explore ancient ruins, collect relics, and earn SOL! Use my referral link: ${referralLink}`;
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
       "_blank",
@@ -172,7 +172,7 @@ export default function Referral() {
               <div>
                 <p className="text-sm text-muted-foreground">Total Earnings</p>
                 <p className="text-2xl font-bold text-neon-purple">
-                  {mockStats.totalEarnings.toFixed(3)} ETH
+                  {mockStats.totalEarnings.toFixed(3)} SOL
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Referral() {
               <div>
                 <p className="text-sm text-muted-foreground">This Month</p>
                 <p className="text-2xl font-bold text-neon-orange">
-                  {mockStats.thisMonthEarnings.toFixed(3)} ETH
+                  {mockStats.thisMonthEarnings.toFixed(3)} SOL
                 </p>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function Referral() {
                     <p>• Minimum referrals: {tier.minReferrals}</p>
                     <p>• Commission rate: {tier.commission}%</p>
                     {tier.bonusReward > 0 && (
-                      <p>• Tier bonus: {tier.bonusReward} ETH</p>
+                      <p>• Tier bonus: {tier.bonusReward} SOL</p>
                     )}
                   </div>
                 </div>
@@ -423,7 +423,7 @@ export default function Referral() {
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground">
             Referral rewards are paid automatically every 24 hours. Minimum
-            payout: 0.001 ETH. All referrals must be legitimate players - abuse
+            payout: 0.001 SOL. All referrals must be legitimate players - abuse
             will result in account suspension.
           </p>
         </div>
