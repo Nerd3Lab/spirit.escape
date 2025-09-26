@@ -16,7 +16,7 @@ function LayoutHeader() {
         <div className="flex items-center justify-between gap-3">
           {/* Left: sidebar trigger + logo */}
           <div className="flex items-center gap-2 md:gap-3">
-            <SidebarTrigger className="md:hidden inline-flex" />
+            <SidebarTrigger className="inline-flex" />
             <div className="relative">
               <Sparkles className="w-8 h-8 text-neon-purple animate-float" />
               <div className="absolute inset-0 blur-sm">
