@@ -13,6 +13,7 @@ import {
   SidebarRail,
   SidebarInset,
   SidebarSeparator,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -32,9 +33,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <Sidebar collapsible="icon" className="bg-sidebar">
         <SidebarHeader>
-          <Link to="/" className="flex items-center gap-2 px-2 py-1">
-            <span className="text-lg font-bold text-neon-purple">Zonic</span>
-          </Link>
+          <SidebarTrigger />
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>

@@ -16,7 +16,6 @@ function LayoutHeader() {
         <div className="flex items-center justify-between gap-3">
           {/* Left: sidebar trigger + logo */}
           <div className="flex items-center gap-2 md:gap-3">
-            <SidebarTrigger className="inline-flex" />
             <div className="relative">
               <Sparkles className="w-8 h-8 text-neon-purple animate-float" />
               <div className="absolute inset-0 blur-sm">
@@ -24,87 +23,30 @@ function LayoutHeader() {
               </div>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-neon-purple">Zonic.Fun</h1>
+              <h1 className="text-xl font-bold text-white">
+                Zonic<span className="text-neon-purple">.Fun</span>
+              </h1>
               <p className="text-xs text-muted-foreground">
                 Decentralized Risk Game
               </p>
             </div>
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="/play"
-              className={`text-sm transition-colors ${
-                isActiveRoute("/play")
-                  ? "text-neon-blue"
-                  : "text-muted-foreground hover:text-neon-blue"
-              }`}
-            >
-              Play
-            </Link>
-            <Link
-              to="/staking"
-              className={`text-sm transition-colors ${
-                isActiveRoute("/staking")
-                  ? "text-neon-blue"
-                  : "text-muted-foreground hover:text-neon-blue"
-              }`}
-            >
-              Staking
-            </Link>
-            <Link
-              to="/leaderboard"
-              className={`text-sm transition-colors ${
-                isActiveRoute("/leaderboard")
-                  ? "text-neon-blue"
-                  : "text-muted-foreground hover:text-neon-blue"
-              }`}
-            >
-              Leaderboard
-            </Link>
-            <Link
-              to="/referral"
-              className={`text-sm transition-colors ${
-                isActiveRoute("/referral")
-                  ? "text-neon-blue"
-                  : "text-muted-foreground hover:text-neon-blue"
-              }`}
-            >
-              Referrals
-            </Link>
-            <Link
-              to="/fairness"
-              className={`text-sm transition-colors ${
-                isActiveRoute("/fairness")
-                  ? "text-neon-blue"
-                  : "text-muted-foreground hover:text-neon-blue"
-              }`}
-            >
-              Fairness
-            </Link>
-            <Link
-              to="#"
-              className="text-sm text-muted-foreground hover:text-neon-blue transition-colors"
-            >
-              Docs
-            </Link>
-          </nav>
-
-          {/* Trust Indicators */}
-          <div className="hidden lg:flex items-center gap-4 text-xs text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <Shield className="w-4 h-4 text-neon-green" />
-              <span>VRF Verified</span>
+          <div className="flex items-center gap-4">
+            {/* Trust Indicators */}
+            <div className="hidden lg:flex items-center gap-4 text-xs text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <Shield className="w-4 h-4 text-neon-green" />
+                <span>VRF Verified</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Users className="w-4 h-4 text-neon-blue" />
+                <span>892 Players</span>
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              <Users className="w-4 h-4 text-neon-blue" />
-              <span>892 Players</span>
-            </div>
+
+            {/* Wallet Connect */}
+            <WalletConnect />
           </div>
-
-          {/* Wallet Connect */}
-          <WalletConnect />
         </div>
       </div>
     </header>
