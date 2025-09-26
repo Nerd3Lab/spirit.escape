@@ -35,9 +35,9 @@ function LayoutHeader() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              to="/"
+              to="/play"
               className={`text-sm transition-colors ${
-                isActiveRoute("/")
+                isActiveRoute("/play")
                   ? "text-neon-blue"
                   : "text-muted-foreground hover:text-neon-blue"
               }`}
