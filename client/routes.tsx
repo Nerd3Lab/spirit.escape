@@ -22,6 +22,12 @@ export const routes = [
     name: "Play",
   },
   {
+    path: "/death",
+    element: <Death />,
+    nodeRef: createRef(),
+    name: "Death",
+  },
+  {
     path: "/staking",
     element: <Staking />,
     nodeRef: createRef(),
