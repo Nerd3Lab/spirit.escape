@@ -1,5 +1,7 @@
 import { createRef } from "react";
 import Index from "./pages/Index";
+import Play from "@/pages/Play";
+import Death from "@/pages/Death";
 import Staking from "@/pages/Staking";
 import Leaderboard from "@/pages/Leaderboard";
 import Referral from "@/pages/Referral";
@@ -12,6 +14,18 @@ export const routes = [
     element: <Index />,
     nodeRef: createRef(),
     name: "Home",
+  },
+  {
+    path: "/play",
+    element: <Play />,
+    nodeRef: createRef(),
+    name: "Play",
+  },
+  {
+    path: "/death",
+    element: <Death />,
+    nodeRef: createRef(),
+    name: "Death",
   },
   {
     path: "/staking",
